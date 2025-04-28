@@ -1,0 +1,23 @@
+# Ambiente virtuale
+.venv/
+venv/
+.vscode/
+seleniumhq.github.io/
+
+# File di configurazione sensibili
+config.py
+
+# File di sistema
+__pycache__/
+*.pyc
+
+# File temporanei/macOS
+.DS_Store
+
+# File di log
+*.log
+
+#File progetto
+BUGLIST.txt
+credentials.json
+testi.py temp_pren_bot.py
