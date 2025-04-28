@@ -20,4 +20,5 @@ __pycache__/
 #File progetto
 BUGLIST.txt
 credentials.json
-testi.py temp_pren_bot.py
+testi.py 
+temp_pren_bot.py
