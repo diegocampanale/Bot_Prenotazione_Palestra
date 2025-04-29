@@ -19,7 +19,8 @@ from datetime import datetime
 # scheduler.start()
 from scheduler_instance import scheduler
 
-BOT_TOKEN = "7925539011:AAHvmEmEeZo4SFy47m7lNttEfxuB_HhZA6M"
+from config import TOKEN
+BOT_TOKEN = TOKEN
 
 logging.basicConfig(level=logging.INFO)
 
