@@ -6,6 +6,7 @@ seleniumhq.github.io/
 
 # File di configurazione sensibili
 config.py
+GymBot_Key.pem
 
 # File di sistema
 __pycache__/
