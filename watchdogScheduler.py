@@ -13,6 +13,7 @@ import threading
 import asyncio
 from booking_records import add_booking
 from datetime import datetime
+from messaggiOutput import mess_prenotazione_eseguita, mess_prenotazione_fallita
 
 # Definisci lo scheduler come variabile globale
 # scheduler = BackgroundScheduler()
@@ -164,20 +165,10 @@ def booking_job(day_name: str, slot: int, chat_id: int, bot: Bot, username: str,
     if result == 1:
         # message = f"Prenotazione per {formatted_date} (orario {orario}) eseguita con successo."
         logging.info("Prenotazione effettuata con SUCCESSO, invio messaggio di conferma.")
-        message = (
-              "*Prenotazione Effettuata\!*\n\n"
-             f"*Data:* `{formatted_date}`\n"
-             f"*Orario:* `{orario.replace('-', '\-')}`\n\n"
-              "✅ *La prenotazione è stata completata con successo\!*\n\n"
-              "_Ci vediamo in palestra\!_")
+        message = mess_prenotazione_eseguita(formatted_date,orario)
     else:
         logging.info("Prenotazione non effettuata, invio messaggio di insuccesso.")
-        message = (
-              "*Prenotazione Fallita\!*\n\n"
-             f"*Data:* `{formatted_date}`\n"
-             f"*Orario:* `{orario.replace('-', '\-')}`\n\n"
-              "❌ *La prenotazione non è stata completata*\n\n"
-        )
+        message = mess_prenotazione_fallita(formatted_date,orario)
         
     # Invia il messaggio tramite il bot
     try:
