@@ -178,6 +178,12 @@ def booking_job(day_name: str, slot: int, chat_id: int, bot: Bot, username: str,
             f"*Orario:* `{orario.replace('-', '\-')}`\n\n"
             f"❌ *La prenotazione non è stata completata*\n\n"
         )
+        message = (rf"""*Prenotazione Fallita\!*
+                    *Data:* `{formatted_date}`
+                    *Orario:* `{orario.replace('-', '\-')}`
+
+                    ❌ *La prenotazione non è stata completata*
+                    """)
         
     # Invia il messaggio tramite il bot
     try:

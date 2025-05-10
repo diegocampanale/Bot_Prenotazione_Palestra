@@ -36,7 +36,7 @@ italian_months = {
     11: "novembre", 12: "dicembre"
 }
 
-def get_next_occurrence(day_name: str) -> (datetime, str):
+def get_next_occurrence(day_name: str) -> tuple[datetime, str]:
     """
     Calcola la prossima occorrenza del giorno della settimana specificato (es. "martedi").
     Restituisce:

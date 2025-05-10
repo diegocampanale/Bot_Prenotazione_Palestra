@@ -7,8 +7,8 @@ from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 from config import url
 
-ORA = 0
-MINUTI = 0
+ORA = 15
+MINUTI = 19
 
 slot = ["UC_FreeFitness_GVPeriodi_CBScelta_0","UC_FreeFitness_GVPeriodi_CBScelta_1","UC_FreeFitness_GVPeriodi_CBScelta_2","UC_FreeFitness_GVPeriodi_CBScelta_3"]
 
