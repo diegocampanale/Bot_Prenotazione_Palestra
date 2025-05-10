@@ -165,18 +165,18 @@ def booking_job(day_name: str, slot: int, chat_id: int, bot: Bot, username: str,
         # message = f"Prenotazione per {formatted_date} (orario {orario}) eseguita con successo."
         logging.info("Prenotazione effettuata con SUCCESSO, invio messaggio di conferma.")
         message = (
-            rf"*Prenotazione Effettuata\!*\n\n"
-            rf"*Data:* `{formatted_date}`\n"
-            rf"*Orario:* `{orario.replace('-', '\-')}`\n\n"
-            rf"✅ *La prenotazione è stata completata con successo\!*\n\n"
-            rf"_Ci vediamo in palestra!_")
+              "*Prenotazione Effettuata\!*\n\n"
+             f"*Data:* `{formatted_date}`\n"
+             f"*Orario:* `{orario.replace('-', '\-')}`\n\n"
+              "✅ *La prenotazione è stata completata con successo\!*\n\n"
+              "_Ci vediamo in palestra\!_")
     else:
         logging.info("Prenotazione non effettuata, invio messaggio di insuccesso.")
         message = (
-            rf"*Prenotazione Fallita\!*\n\n"
-            rf"*Data:* `{formatted_date}`\n"
-            rf"*Orario:* `{orario.replace('-', '\-')}`\n\n"
-            rf"❌ *La prenotazione non è stata completata*\n\n"
+              "*Prenotazione Fallita\!*\n\n"
+             f"*Data:* `{formatted_date}`\n"
+             f"*Orario:* `{orario.replace('-', '\-')}`\n\n"
+              "❌ *La prenotazione non è stata completata*\n\n"
         )
         
     # Invia il messaggio tramite il bot
