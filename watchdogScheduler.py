@@ -169,7 +169,7 @@ def booking_job(day_name: str, slot: int, chat_id: int, bot: Bot, username: str,
             f"*Data:* `{formatted_date}`\n"
             f"*Orario:* `{orario.replace('-', '\-')}`\n\n"
             f"✅ *La prenotazione è stata completata con successo\!*\n\n"
-            f"_Ci vediamo in palestra\!_")
+            f"_Ci vediamo in palestra\\!_")
     else:
         logging.info("Prenotazione non effettuata, invio messaggio di insuccesso.")
         message = (
