@@ -8,6 +8,23 @@ from telegram.ext import (
 )
 import logging
 
+# Imposta il file di log e il formato
+logging.basicConfig(
+    filename='/home/ubuntu/BotPrenotazionePalestra/bot.log',
+    level=logging.INFO,
+    format='%(asctime)s - %(levelname)s - %(message)s'
+)
+
+# Esempio di log all'avvio del bot
+logging.info("Bot avviato con successo!")
+
+# Per esempio, per loggare un'eccezione:
+try:
+    # Inserisci qui il codice del bot
+    pass
+except Exception as e:
+    logging.error(f"Errore rilevato: {e}")
+
 # Importa le funzioni del modulo di scheduling (watchdogScheduler)
 from watchdogScheduler import schedule_bookings, start_file_watcher
 # Importa i tuoi handler per il bot
