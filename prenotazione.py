@@ -8,8 +8,8 @@ from selenium.webdriver.support import expected_conditions as EC
 from config import url
 
 # imposta -2 ore rispetto all'ora locale
-ORA = 10
-MINUTI = 43
+ORA = 11
+MINUTI = 10
 
 slot = ["UC_FreeFitness_GVPeriodi_CBScelta_0","UC_FreeFitness_GVPeriodi_CBScelta_1","UC_FreeFitness_GVPeriodi_CBScelta_2","UC_FreeFitness_GVPeriodi_CBScelta_3"]
 
