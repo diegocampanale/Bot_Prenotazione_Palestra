@@ -10,7 +10,7 @@ import logging
 
 # Imposta il file di log e il formato
 logging.basicConfig(
-    filename='/home/ubuntu/BotPrenotazionePalestra/bot.log',
+    filename='bot.log',
     level=logging.INFO,
     format='%(asctime)s - %(levelname)s - %(message)s'
 )
