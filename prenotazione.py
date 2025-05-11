@@ -20,6 +20,7 @@ def prenotazione(data, orario, username, password):
     chrome_driver = ChromeDriverManager().install()
     from selenium.webdriver.chrome.options import Options
     chrome_options = Options()
+    chrome_options.binary_location = "/usr/bin/chromium-browser"
     chrome_options.add_argument("--headless")
     chrome_options.add_argument("--disable-gpu")
     chrome_options.add_argument("--no-sandbox")
