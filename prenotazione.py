@@ -1,5 +1,5 @@
 from selenium.webdriver import Chrome
-from webdriver_manager.chrome import ChromeDriverManager
+# from webdriver_manager.chrome import ChromeDriverManager  # not needed with system chromedriver
 from selenium.webdriver.chrome.service import Service
 from selenium.webdriver.common.by import By
 from selenium.common.exceptions import NoSuchElementException, TimeoutException
@@ -9,7 +9,7 @@ from config import url
 
 # imposta -2 ore rispetto all'ora locale
 ORA = 11
-MINUTI = 23
+MINUTI = 26
 
 slot = ["UC_FreeFitness_GVPeriodi_CBScelta_0","UC_FreeFitness_GVPeriodi_CBScelta_1","UC_FreeFitness_GVPeriodi_CBScelta_2","UC_FreeFitness_GVPeriodi_CBScelta_3"]
 
@@ -17,7 +17,7 @@ def prenotazione(data, orario, username, password):
     # chrome_driver = ChromeDriverManager().install()
     # driver = Chrome(service=Service(chrome_driver))
     
-    chrome_driver = ChromeDriverManager().install()
+    chrome_driver = "/usr/bin/chromedriver"
     from selenium.webdriver.chrome.options import Options
     chrome_options = Options()
     chrome_options.binary_location = "/usr/bin/chromium-browser"
@@ -101,4 +101,3 @@ def prenotazione(data, orario, username, password):
     finally:
         # Chiudi il browser
         driver.quit()
-
