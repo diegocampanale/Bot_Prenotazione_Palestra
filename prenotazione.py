@@ -9,7 +9,7 @@ from config import url
 
 # imposta -2 ore rispetto all'ora locale
 ORA = 11
-MINUTI = 17
+MINUTI = 23
 
 slot = ["UC_FreeFitness_GVPeriodi_CBScelta_0","UC_FreeFitness_GVPeriodi_CBScelta_1","UC_FreeFitness_GVPeriodi_CBScelta_2","UC_FreeFitness_GVPeriodi_CBScelta_3"]
 
